@@ -1,0 +1,25 @@
+<script type="text/javascript"> 
+ var $title = document.getElementsByTagName("title")[0] ;
+	
+var digitalData = {
+page: {
+category: {
+  brand: "WA",
+  primaryCategory: "homepage",
+  siteName: "waldorf-astoria-orlando",   
+  siteType: "L",
+},
+pageInfo: {
+  destinationURL: "<?php echo (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>",
+  language: "en_US",
+  pageName: "<?php echo str_replace('/', ":", "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ); ?>",  
+  pageTitle: "<?php echo $title; ?>"     
+}
+},
+product:[{
+        productInfo:{
+        productID: "ORLBCWA"
+        }
+}],
+};
+</script>
