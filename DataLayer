@@ -4,7 +4,7 @@
 var digitalData = {
 page: {
 category: {
-  brand: "WA",
+  brand: "QQ",
   primaryCategory: "homepage",
   siteName: "waldorf-astoria-orlando",   
   siteType: "L",
