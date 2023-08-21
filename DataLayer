@@ -1,11 +1,11 @@
 <script type="text/javascript"> 
- var $title = document.getElementsByTagName("title")[0] ;
-	
+var $title = document.getElementsByTagName("title")[0] ;
 var digitalData = {
 page: {
 category: {
   brand: "QQ",
-  primaryCategory: "homepage",
+   primaryCategory: "<?php $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+  $segments = explode('/', substr($_SERVER['REQUEST_URI_PATH'], 1));
   siteName: "la-quinta-resort-and-club",   
   siteType: "L",
 },
