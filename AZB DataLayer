@@ -1,0 +1,49 @@
+<script type="text/javascript">
+var digitalData = {
+page: {
+category: {
+  brand: "OL",
+  primaryCategory: "<?php $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$segments = explode('/', substr($_SERVER['REQUEST_URI_PATH'], 1));
+if($segments[0] != '') { echo $segments[0]; } else { echo "home";} ?>",
+  siteName: "arizonabilmore",   
+  siteType: "L",
+},
+pageInfo: {
+  destinationURL: "<?php echo (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>",
+  language: "en_US",
+  pageName: "<?php 
+	$pageNameOriginal = str_replace('/', ":", "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" );
+	 $pageNamesecond = preg_replace('#^www\.|\.com$#', '', $pageNameOriginal ); 
+	 echo rtrim($pageNamesecond, ":"); ?>",  
+  pageTitle: "<?php if( is_page() || is_single() ){
+            if(get_field('meta_title')){
+                echo get_field('meta_title');
+            } else {
+                echo 'Arizona Bilmore | ' .get_the_title();
+
+            }
+          }
+
+          if (is_archive()){
+            if( get_field('meta_title', 2666) && get_the_archive_title() !== "Archives: Galleries" ){
+              echo get_field('meta_title', 2666);
+            }
+
+            //for the gallery overview page
+            if(get_the_archive_title() === "Archives: Galleries"){
+                echo get_field('gallery_meta_title', 'option');
+            }
+          }
+
+
+ ?>"     
+}
+},
+product:[{
+        productInfo:{
+        productID: "PHXBMOL"
+        }
+}],
+};
+</script>
